@@ -10,6 +10,19 @@ docker image inspect dockercelepuk/command
 
 docker container create --name command dockercelepuk/command
 
-docker container start
+docker container start command
 
 docker container logs command 
+
+docker build -t dockercelepuk/label label --progress=plain --no-cache
+
+docker image inspect dockercelepuk/label
+
+docker build -t dockercelepuk/add add 
+
+
+docker container create --name add dockercelepuk/add
+
+docker container start add
+
+docker container logs add 
